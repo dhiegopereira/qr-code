@@ -16,6 +16,13 @@ export default function Home() {
     }
   }
 
+  const downloadImage = () => {
+    const link = document.createElement('a');
+    link.href = qrCode;
+    link.download = 'qrcode.png';
+    link.click();
+  }
+
   return (
     <div className='container'>
       <h2>Adicione o texto</h2>
@@ -25,6 +32,8 @@ export default function Home() {
       }}></textarea>
      <button onClick={generateQR}>Gerar QRCode</button>
      <img src={qrCode} width={200} /> 
+     {qrCode && <button onClick={downloadImage}>Baixar Imagem</button>}
+
      <div>Criado por Diegon ❤️ Vivi</div>
     </div>
 
