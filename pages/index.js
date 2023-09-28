@@ -34,7 +34,7 @@ export default function Home() {
      <img src={qrCode} width={200} /> 
      {qrCode && <button onClick={downloadImage}>Baixar Imagem</button>}
 
-     <div>Criado por Diegon ❤️ Vivi</div>
+     <div>Criado por Diegon</div>
     </div>
 
     
